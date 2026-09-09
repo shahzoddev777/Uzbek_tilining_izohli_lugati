@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_house"
+            app:destination="@id/house"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/house"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_house_to_dictionaryInfoFragment"
+            app:destination="@id/dictionaryInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryInfoFragment"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.DictionaryInfoFragment"
+        android:label="DictionaryInfoFragment"
+        tools:layout="@layout/fragment_dictionary_info">
+        <argument
+            android:name="word"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/book"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.AtamaFragment"
+        android:label="AtamaFragment"
+        tools:layout="@layout/fragment_atama" />
+
+    <fragment
+        android:id="@+id/Setting"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>

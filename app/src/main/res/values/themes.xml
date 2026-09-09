@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OzbekTiliningIzohliUgati" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Theme.OzbekTiliningIzohliUgati" parent="Base.Theme.OzbekTiliningIzohliUgati" />
+
+    <!-- BottomNavigationView uchun maxsus style -->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="itemBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- Splash Screen uchun maxsus tema -->
+    <style name="Theme.AppSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.OzbekTiliningIzohliUgati</item>
+    </style>
+</resources>

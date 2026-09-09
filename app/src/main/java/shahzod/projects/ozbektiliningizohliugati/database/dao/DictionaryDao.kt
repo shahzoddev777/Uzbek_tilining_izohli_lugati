@@ -1,0 +1,15 @@
+package shahzod.projects.ozbektiliningizohliugati.database.dao
+
+import androidx.room.Dao
+import androidx.room.Query
+import shahzod.projects.ozbektiliningizohliugati.database.entity.Entity
+
+@Dao
+interface DictionaryDao {
+
+    @Query("SELECT * FROM dictionary")
+    fun getAllWords(): List<Entity>
+
+    @Query("SELECT * FROM dictionary WHERE word LIKE '%' || :query || '%'")
+    fun searchWords(query: String): List<Entity>
+}
