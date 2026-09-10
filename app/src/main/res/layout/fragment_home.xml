@@ -50,6 +50,8 @@
                 android:background="@drawable/search_item"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:submitBackground="@android:color/transparent"
                 app:queryHint="So'z qidiring..." />
 
         </LinearLayout>

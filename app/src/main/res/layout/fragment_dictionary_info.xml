@@ -21,44 +21,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="#0D47A1" />
 
-
     <TextView
         android:id="@+id/tv_word"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="sans-serif-medium"
         android:text="adabiyot"
         android:textColor="#0D47A1"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/img_transcription_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
+    <!-- Ovozli talaffuz ikonchasi -->
     <ImageView
         android:id="@+id/img_transcription_icon"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/speaker"
-        app:layout_constraintStart_toStartOf="@id/tv_word"
-        app:layout_constraintTop_toBottomOf="@id/tv_word"
-        app:tint="#78909C" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_word"
+        app:tint="#0D47A1" />
 
-    <TextView
-        android:id="@+id/tv_transcription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="sans-serif"
-        android:textColor="#78909C"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/img_transcription_icon"
-        app:layout_constraintStart_toEndOf="@id/img_transcription_icon"
-        app:layout_constraintTop_toTopOf="@id/img_transcription_icon" />
-
+    <!-- Kontent qismi (ScrollView) -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -66,7 +58,7 @@
         android:clipToPadding="false"
         android:paddingBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_transcription_icon">
+        app:layout_constraintTop_toBottomOf="@id/tv_word">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,7 +91,7 @@
 
                     <TextView
                         android:id="@+id/tv_description"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif"
@@ -112,27 +104,5 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/btn_add_to_favorite"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="56dp"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginBottom="24dp"-->
-<!--        android:background="@drawable/bg_button_blue"-->
-<!--        android:drawableStart="@drawable/ic_heart_outline_white"-->
-<!--        android:drawablePadding="8dp"-->
-<!--        android:fontFamily="sans-serif-medium"-->
-<!--        android:gravity="center"-->
-<!--        android:paddingStart="24dp"-->
-<!--        android:paddingEnd="24dp"-->
-<!--        android:text="Sevimlilarga qo'shish"-->
-<!--        android:textAllCaps="false"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="16sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

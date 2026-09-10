@@ -31,7 +31,7 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
         }
 
         binding.imgTranscriptionIcon.setOnClickListener {
-            val textToSpeak = binding.tvWord.text.toString()
+            val textToSpeak = binding.tvWord.text.toString().lowercase()
             if (textToSpeak.isNotEmpty()) {
                 tts?.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, null, "")
             }
@@ -40,11 +40,10 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts?.setLanguage(Locale("uz"))
-            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                // Agar o'zbek tili bo'lmasa, turkiy tillardan birini yoki defaultni tanlaymiz
-                tts?.setLanguage(Locale("tr")) // Turk tili o'zbekchaga yaqinroq talaffuz uchun
-            }
+            tts?.language = Locale.US
+//            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+//                tts?.setLanguage(Locale.)
+//            }
         } else {
             Toast.makeText(requireContext(), "Ovozli xizmatni ishga tushirib bo'lmadi", Toast.LENGTH_SHORT).show()
         }
