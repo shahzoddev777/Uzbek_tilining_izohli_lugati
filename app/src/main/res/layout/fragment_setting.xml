@@ -22,16 +22,20 @@
             android:id="@+id/btn_sozlamalar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
             android:background="@null"
             android:src="@drawable/settings" />
 
         <View
-            android:layout_width="65dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:fontFamily="@font/inter"
             android:text="Sozlamalar"
             android:textColor="@color/black"
@@ -121,7 +125,7 @@
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/info"
+                android:src="@drawable/baseline_star_outline_24"
                 app:tint="#3F536E" />
 
             <LinearLayout
@@ -134,7 +138,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ilova haqida"
+                    android:text="Ilovani baholash"
                     android:textColor="#3F536E"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -143,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Versiya 1.1.0"
+                    android:text="Bizni qo'llab-quvvatlang"
                     android:textColor="#78909C"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -223,9 +227,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:fontFamily="@font/inter"
         android:text="O'zbek tilining  boy merosini \nhar bir telefonga olib kiramiz"
         android:textSize="14sp"
-        android:fontFamily="@font/inter"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

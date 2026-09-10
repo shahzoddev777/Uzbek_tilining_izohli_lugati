@@ -50,6 +50,16 @@
         android:id="@+id/Setting"
         android:name="shahzod.projects.ozbektiliningizohliugati.presentation.SettingFragment"
         android:label="SettingFragment"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_Setting_to_starFragment"
+            app:destination="@id/starFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/starFragment"
+        android:name="shahzod.projects.ozbektiliningizohliugati.presentation.StarFragment"
+        android:label="StarFragment"
+        tools:layout="@layout/fragment_star" />
 
 </navigation>
