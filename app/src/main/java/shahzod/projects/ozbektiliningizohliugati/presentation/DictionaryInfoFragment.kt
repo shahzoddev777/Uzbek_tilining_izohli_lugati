@@ -40,12 +40,12 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            tts?.language = Locale.US
-//            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-//                tts?.setLanguage(Locale.)
-//            }
+            val result = tts?.setLanguage(Locale("uz"))
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                tts?.setLanguage(Locale("tr"))
+            }
         } else {
-            Toast.makeText(requireContext(), "Ovozli xizmatni ishga tushirib bo'lmadi", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.speech_service_error), Toast.LENGTH_SHORT).show()
         }
     }
 

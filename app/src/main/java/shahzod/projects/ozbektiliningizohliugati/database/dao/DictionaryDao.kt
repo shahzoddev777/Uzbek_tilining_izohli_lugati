@@ -12,4 +12,7 @@ interface DictionaryDao {
 
     @Query("SELECT * FROM dictionary WHERE word LIKE '%' || :query || '%'")
     fun searchWords(query: String): List<Entity>
+
+    @Query("SELECT * FROM dictionary ORDER BY RANDOM() LIMIT 1")
+    suspend fun getRandomWord(): Entity?
 }

@@ -1,13 +1,12 @@
 package shahzod.projects.ozbektiliningizohliugati.presentation
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.text.InputFilter
 import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.EditText
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import dev.androidbroadcast.vbpd.viewBinding
 import shahzod.projects.ozbektiliningizohliugati.R
 import shahzod.projects.ozbektiliningizohliugati.adapter.DictionaryAdapter
@@ -22,9 +21,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter = DictionaryAdapter(mutableListOf())
-        binding.recyclerView.layoutManager= LinearLayoutManager(requireContext())
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
-        adapter.submitList(db.getWordDao().getAllWords())
+        
+        val allWords = db.getWordDao().getAllWords()
+        adapter.submitList(allWords)
+
+        // Set max length for SearchView (e.g., 30 characters)
+        val searchEditText = binding.searchBox.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+        searchEditText?.filters = arrayOf(InputFilter.LengthFilter(30))
 
         adapter.setOnItemClickListener { entity ->
             val bundle = Bundle().apply {
@@ -40,12 +45,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                val searchResult = if (newText.isNullOrEmpty()) {
+                val query = newText ?: ""
+                val searchResult = if (query.isEmpty()) {
                     db.getWordDao().getAllWords()
                 } else {
-                    db.getWordDao().searchWords(newText)
+                    db.getWordDao().searchWords(query)
                 }
-                adapter.submitList(searchResult)
+                
+                adapter.submitList(searchResult, query)
+                
+                if (searchResult.isEmpty()) {
+                    binding.layoutEmpty.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                } else {
+                    binding.layoutEmpty.visibility = View.GONE
+                    binding.recyclerView.visibility = View.VISIBLE
+                }
                 return true
             }
         })

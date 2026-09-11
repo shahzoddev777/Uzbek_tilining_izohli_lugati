@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:fontFamily="@font/inter"
-            android:text="Sozlamalar"
+            android:text="@string/settings"
             android:textColor="@color/black"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -78,7 +78,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fikr bildirish"
+                    android:text="@string/feedback"
                     android:textColor="#3F536E"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Bizga yozing"
+                    android:text="@string/write_to_us"
                     android:textColor="#78909C"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -138,7 +138,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ilovani baholash"
+                    android:text="@string/rate_app_item"
                     android:textColor="#3F536E"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -147,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Bizni qo'llab-quvvatlang"
+                    android:text="@string/support_us"
                     android:textColor="#78909C"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -198,7 +198,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ilova haqida"
+                    android:text="@string/about_app"
                     android:textColor="#3F536E"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -207,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Versiya 1.1.0"
+                    android:text="@string/app_version"
                     android:textColor="#78909C"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -228,7 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/inter"
-        android:text="O'zbek tilining  boy merosini \nhar bir telefonga olib kiramiz"
+        android:text="@string/app_motto"
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

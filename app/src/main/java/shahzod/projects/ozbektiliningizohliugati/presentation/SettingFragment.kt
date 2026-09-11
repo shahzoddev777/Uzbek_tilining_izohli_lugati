@@ -26,7 +26,7 @@ class SettingFragment : Fragment(R.layout.fragment_setting) {
         }
 
         binding.cardview3.setOnClickListener {
-            Toast.makeText(requireContext(), "Ilova versiyasi: 1.1.0", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.app_version), Toast.LENGTH_SHORT).show()
         }
     }
 }

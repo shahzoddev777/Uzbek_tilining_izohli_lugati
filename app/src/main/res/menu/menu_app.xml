@@ -4,14 +4,14 @@
     <item
         android:id="@+id/house"
         android:icon="@drawable/house"
-        android:title="Bosh sahifa" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/book"
-        android:title="Imlo"
+        android:title="@string/spelling"
         android:icon="@drawable/book"/>
     <item
         android:id="@+id/Setting"
         android:icon="@drawable/settings"
-        android:title="Sozlamalar" />
+        android:title="@string/settings" />
 </menu>

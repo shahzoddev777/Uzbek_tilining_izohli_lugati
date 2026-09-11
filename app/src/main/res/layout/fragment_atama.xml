@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="Imlo lug'ati"
+            android:text="@string/imlo_lugati"
             android:textAllCaps="true"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -38,12 +38,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_gravity="center_vertical"
-            android:text="To'g'ri yozilishini \ntekshiring"
+            android:text="@string/check_orthography"
             android:textAllCaps="false"
             android:textStyle="bold"
             android:textSize="24sp"
             android:fontFamily="@font/inter"
-            android:textColor="#ffff"/>
+            android:textColor="#FFFFFF"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -5,33 +5,34 @@ plugins {
 
 android {
     namespace = "shahzod.projects.ozbektiliningizohliugati"
-    compileSdk {
-        version = release(37)
-    }
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "shahzod.projects.ozbektiliningizohliugati"
         minSdk = 24
-        targetSdk = 37
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 35
+        versionCode = 2
+        versionName = "1.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            optimization {
-                enable = false
-            }
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    buildFeatures{
-        viewBinding=true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -61,4 +62,6 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
     //Material components
     implementation("com.google.android.material:material:1.9.0")
+    //notification
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
 }

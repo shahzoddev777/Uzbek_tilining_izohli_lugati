@@ -1,5 +1,28 @@
 <resources>
-    <string name="app_name">O\'zbek tilining izohli ug\'ati</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Izohli lug\'at</string>
+    <string name="nashr_2026">NASHR · 2026</string>
+    <string name="welcome">Xush kelibsiz!</string>
+    <string name="dictionary_title">O\'zbek tilining izohli lug\'ati</string>
+    <string name="search_hint">So\'z qidiring...</string>
+    <string name="imlo_lugati">Imlo lug\'ati</string>
+    <string name="check_orthography">To\'g\'ri yozilishini \ntekshiring</string>
+    <string name="rate_app_title">Baholash</string>
+    <string name="rate_app_heading">Ilovani baholang</string>
+    <string name="rate_app_description">Ilovamiz sizga yoqqan bo\'lsa, \niltimos, yulduzcha bilan baholang. \nBu biz uchun juda muhim!</string>
+    <string name="later">Keyinroq</string>
+    <string name="rate_now">Baholash</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="feedback">Fikr bildirish</string>
+    <string name="write_to_us">Bizga yozing</string>
+    <string name="rate_app_item">Ilovani baholash</string>
+    <string name="support_us">Bizni qo\'llab-quvvatlang</string>
+    <string name="about_app">Ilova haqida</string>
+    <string name="app_version">Versiya 1.1.0</string>
+    <string name="app_motto">O\'zbek tilining  boy merosini \nhar bir telefonga olib kiramiz</string>
+    <string name="explanation">Izoh</string>
+    <string name="home">Bosh sahifa</string>
+    <string name="spelling">Imlo</string>
+    <string name="thank_you_rating">Rahmat! Bahongiz qabul qilindi.</string>
+    <string name="please_select_stars">Iltimos, yulduzchalarni tanlang</string>
+    <string name="speech_service_error">Ovozli xizmatni ishga tushirib bo\'lmadi</string>
 </resources>

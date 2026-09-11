@@ -19,17 +19,16 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile
         private var instance: AppDatabase? = null
         fun getInstance(context: Context): AppDatabase {
-            if (instance == null) {
-                instance = Room.databaseBuilder(
+            return instance ?: synchronized(this) {
+                instance ?: Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database.db"
                 )
                     .allowMainThreadQueries()
                     .createFromAsset("data.db")
-                    .build()
+                    .build().also { instance = it }
             }
-            return instance!!
         }
 
         fun getInstance()=instance

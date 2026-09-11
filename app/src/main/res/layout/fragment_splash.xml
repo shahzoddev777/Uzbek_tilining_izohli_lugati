@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-medium"
-        android:text="NASHR · 2026"
+        android:text="@string/nashr_2026"
         android:textColor="@color/splash_text_color"
         android:textSize="14sp"
         android:letterSpacing="0.1"

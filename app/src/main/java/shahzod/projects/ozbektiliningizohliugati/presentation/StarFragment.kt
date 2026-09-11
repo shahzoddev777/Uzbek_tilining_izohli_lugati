@@ -28,14 +28,14 @@ class StarFragment : Fragment(R.layout.fragment_star) {
             if (rating > 0) {
                 Toast.makeText(
                     requireContext(),
-                    "Rahmat! Bahongiz qabul qilindi.",
+                    getString(R.string.thank_you_rating),
                     Toast.LENGTH_SHORT
                 ).show()
                 findNavController().navigateUp()
             } else {
                 Toast.makeText(
                     requireContext(),
-                    "Iltimos, yulduzchalarni tanlang",
+                    getString(R.string.please_select_stars),
                     Toast.LENGTH_SHORT
                 ).show()
             }
