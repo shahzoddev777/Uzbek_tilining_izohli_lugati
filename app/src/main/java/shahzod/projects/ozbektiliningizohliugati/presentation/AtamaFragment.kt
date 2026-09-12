@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.androidbroadcast.vbpd.viewBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import shahzod.projects.ozbektiliningizohliugati.R
 import shahzod.projects.ozbektiliningizohliugati.adapter.AtamaAdapter
 import shahzod.projects.ozbektiliningizohliugati.database.AppDatabase
@@ -21,6 +25,11 @@ class AtamaFragment : Fragment(R.layout.fragment_atama) {
         adapter = AtamaAdapter(mutableListOf())
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
-        adapter.submitList(db.getAtamaDao().getAllAtamaWords())
+       viewLifecycleOwner.lifecycleScope.launch {
+           val words = withContext(Dispatchers.IO) {
+               db.getAtamaDao().getAllAtamaWords()
+           }
+           adapter.submitList(words)
+       }
     }
 }

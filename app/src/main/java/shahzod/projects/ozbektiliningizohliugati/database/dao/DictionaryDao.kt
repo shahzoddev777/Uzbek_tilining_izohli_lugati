@@ -8,10 +8,10 @@ import shahzod.projects.ozbektiliningizohliugati.database.entity.Entity
 interface DictionaryDao {
 
     @Query("SELECT * FROM dictionary")
-    fun getAllWords(): List<Entity>
+    suspend  fun getAllWords(): List<Entity>
 
     @Query("SELECT * FROM dictionary WHERE word LIKE '%' || :query || '%'")
-    fun searchWords(query: String): List<Entity>
+    suspend  fun searchWords(query: String): List<Entity>
 
     @Query("SELECT * FROM dictionary ORDER BY RANDOM() LIMIT 1")
     suspend fun getRandomWord(): Entity?

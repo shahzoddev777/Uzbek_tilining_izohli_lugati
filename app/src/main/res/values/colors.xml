@@ -3,5 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gold">#C5A358</color>
-    <color name="splash_text_color">#fff</color>
+    <color name="splash_text_color">#FFFFFF</color>
+    <color name="setting_icon">#3F536E</color>
+    <color name="setting_subtitle">#78909C</color>
 </resources>

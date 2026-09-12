@@ -14,6 +14,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import shahzod.projects.ozbektiliningizohliugati.databinding.ActivityMainBinding
 
@@ -76,18 +77,7 @@ class MainActivity : AppCompatActivity() {
                 it.startAnimation(anim)
             }
 
-            if (navController.currentDestination?.id != item.itemId) {
-                navController.navigate(item.itemId) {
-                    popUpTo(navController.graph.startDestinationId) {
-                        saveState = true
-                    }
-                    launchSingleTop = true
-                    restoreState = true
-                }
-                true
-            } else {
-                false
-            }
+            item.onNavDestinationSelected(navController)
         }
     }
 }

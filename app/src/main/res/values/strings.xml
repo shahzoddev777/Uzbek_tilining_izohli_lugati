@@ -25,4 +25,5 @@
     <string name="thank_you_rating">Rahmat! Bahongiz qabul qilindi.</string>
     <string name="please_select_stars">Iltimos, yulduzchalarni tanlang</string>
     <string name="speech_service_error">Ovozli xizmatni ishga tushirib bo\'lmadi</string>
+    <string name="no_results">Hech narsa topilmadi</string>
 </resources>

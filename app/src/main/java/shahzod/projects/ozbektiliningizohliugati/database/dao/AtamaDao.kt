@@ -7,5 +7,5 @@ import shahzod.projects.ozbektiliningizohliugati.database.entity.AtamaEntity
 @Dao
 interface AtamaDao {
     @Query("select * from atama")
-    fun getAllAtamaWords(): List<AtamaEntity>
+    suspend fun getAllAtamaWords(): List<AtamaEntity>
 }

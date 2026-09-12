@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "shahzod.projects.ozbektiliningizohliugati"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "shahzod.projects.ozbektiliningizohliugati"
