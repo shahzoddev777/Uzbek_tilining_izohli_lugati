@@ -9,7 +9,7 @@ import shahzod.projects.ozbektiliningizohliugati.database.dao.DictionaryDao
 import shahzod.projects.ozbektiliningizohliugati.database.entity.AtamaEntity
 import shahzod.projects.ozbektiliningizohliugati.database.entity.Entity
 
-@Database(entities = [Entity::class, AtamaEntity::class], version = 1)
+@Database(entities = [Entity::class, AtamaEntity::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getWordDao(): DictionaryDao
@@ -26,6 +26,7 @@ abstract class AppDatabase : RoomDatabase() {
                     "app_database.db"
                 )
                     .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration(true)
                     .createFromAsset("data.db")
                     .build().also { instance = it }
             }

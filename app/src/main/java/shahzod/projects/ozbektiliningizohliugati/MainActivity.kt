@@ -58,6 +58,10 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomNavigationView.setupWithNavController(navController)
 
+        if (savedInstanceState == null) {
+            navController.navigate(R.id.splashFragment)
+        }
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.splashFragment, R.id.dictionaryInfoFragment, R.id.starFragment -> {
@@ -79,5 +83,12 @@ class MainActivity : AppCompatActivity() {
 
             item.onNavDestinationSelected(navController)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

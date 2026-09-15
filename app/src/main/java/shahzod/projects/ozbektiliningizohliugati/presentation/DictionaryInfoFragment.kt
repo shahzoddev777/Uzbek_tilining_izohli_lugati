@@ -14,6 +14,7 @@ import java.util.Locale
 class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), TextToSpeech.OnInitListener {
     private val binding by viewBinding(FragmentDictionaryInfoBinding::bind)
     private var tts: TextToSpeech? = null
+    private var isTtsReady = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,6 +32,10 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
         }
 
         binding.imgTranscriptionIcon.setOnClickListener {
+            if (!isTtsReady) {
+                Toast.makeText(requireContext(), "Ovozli xizmat tayyorlanmoqda...", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val textToSpeak = binding.tvWord.text.toString().lowercase()
             if (textToSpeak.isNotEmpty()) {
                 tts?.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, null, "")
@@ -44,7 +49,9 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 tts?.setLanguage(Locale("tr"))
             }
+            isTtsReady = true
         } else {
+            isTtsReady = false
             Toast.makeText(requireContext(), getString(R.string.speech_service_error), Toast.LENGTH_SHORT).show()
         }
     }
