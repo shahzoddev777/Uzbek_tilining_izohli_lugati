@@ -16,6 +16,8 @@
     <string name="write_to_us">Bizga yozing</string>
     <string name="rate_app_item">Ilovani baholash</string>
     <string name="support_us">Bizni qo\'llab-quvvatlang</string>
+    <string name="dark_mode">Tungi rejim</string>
+    <string name="dark_mode_desc">To\'q rangli mavzuni yoqish</string>
     <string name="about_app">Ilova haqida</string>
     <string name="app_version">Versiya 1.1.0</string>
     <string name="app_motto">O\'zbek tilining  boy merosini \nhar bir telefonga olib kiramiz</string>

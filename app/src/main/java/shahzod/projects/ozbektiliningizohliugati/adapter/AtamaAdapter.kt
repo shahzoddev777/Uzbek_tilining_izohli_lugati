@@ -14,6 +14,7 @@ class AtamaAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(soz: AtamaEntity) {
             binding.tvWord.text = soz.word
+            binding.tvFirstLetter.text = soz.word.firstOrNull()?.toString()?.uppercase() ?: ""
         }
     }
 

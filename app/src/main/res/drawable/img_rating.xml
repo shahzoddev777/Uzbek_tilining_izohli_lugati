@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="180dp"
+    android:viewportWidth="200"
+    android:viewportHeight="180">
+
+    <!-- Soft background circle -->
+    <path
+        android:fillColor="#EAF2FF"
+        android:pathData="M100,10 A80,80 0,1 0,100,170 A80,80 0,1 0,100,10" />
+
+    <!-- Main big star -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M100,35
+            L109,62
+            L138,62
+            L115,79
+            L124,107
+            L100,90
+            L76,107
+            L85,79
+            L62,62
+            L91,62
+            Z" />
+
+    <!-- Star highlight -->
+    <path
+        android:fillColor="#FFD95A"
+        android:pathData="M100,42
+            L106,63
+            L128,63
+            L111,75
+            L117,96
+            L100,84
+            Z" />
+
+    <!-- Small star left -->
+    <path
+        android:fillColor="#4F8CFF"
+        android:pathData="M48,78
+            L52,89
+            L64,89
+            L54,96
+            L58,108
+            L48,101
+            L38,108
+            L42,96
+            L32,89
+            L44,89
+            Z" />
+
+    <!-- Small star right -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M153,75
+            L157,86
+            L169,86
+            L159,93
+            L163,105
+            L153,98
+            L143,105
+            L147,93
+            L137,86
+            L149,86
+            Z" />
+
+    <!-- Sparkle top left -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M48,40
+            L51,49
+            L60,52
+            L51,55
+            L48,64
+            L45,55
+            L36,52
+            L45,49
+            Z" />
+
+    <!-- Sparkle top right -->
+    <path
+        android:fillColor="#A855F7"
+        android:pathData="M151,39
+            L154,48
+            L163,51
+            L154,54
+            L151,63
+            L148,54
+            L139,51
+            L148,48
+            Z" />
+
+    <!-- Bottom shadow -->
+    <path
+        android:fillColor="#D7E4FA"
+        android:pathData="M57,128
+            C75,119 125,119 143,128
+            C130,142 70,142 57,128 Z" />
+
+    <!-- Rating stars row -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M69,122
+            L72,130 L81,130 L74,135 L77,143 L69,138 L61,143 L64,135 L57,130 L66,130 Z" />
+
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M88,122
+            L91,130 L100,130 L93,135 L96,143 L88,138 L80,143 L83,135 L76,130 L85,130 Z" />
+
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M107,122
+            L110,130 L119,130 L112,135 L115,143 L107,138 L99,143 L102,135 L95,130 L104,130 Z" />
+
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M126,122
+            L129,130 L138,130 L131,135 L134,143 L126,138 L118,143 L121,135 L114,130 L123,130 Z" />
+
+</vector>

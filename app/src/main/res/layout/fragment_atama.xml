@@ -1,59 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/settings_background"
     tools:context=".presentation.AtamaFragment">
 
+    <!-- Header -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cardBackgroundColor="#0A1225"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="@color/header_blue"
+        app:cardCornerRadius="28dp"
         app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/imlo_lugati"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#EAD08D"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/check_orthography"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:fontFamily="@font/inter"
-            android:textColor="#FFFFFF"/>
+            <!-- Dekorativ doira -->
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:alpha="0.12"
+                android:background="@drawable/bg_header_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:alpha="0.10"
+                android:background="@drawable/bg_header_circle_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Sarlavha -->
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/imlo_lugati"
+                android:textAllCaps="true"
+                android:textColor="#BFD3FF"
+                android:textSize="13sp"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0.08"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Asosiy matn -->
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:text="@string/check_orthography"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/inter"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
+    <!-- Bo'lim nomi -->
+    <TextView
+        android:id="@+id/tv_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:text="Imlo bo‘yicha so‘zlar"
+        android:textColor="@color/text_primary"
+        android:textSize="19sp"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview" />
+
+    <TextView
+        android:id="@+id/tv_section_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="To‘g‘ri yozilishini tekshiring"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:fontFamily="@font/inter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_section" />
+
+    <!-- So'zlar ro'yxati -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardview"
-        app:layout_goneMarginTop="12dp" />
+        app:layout_constraintTop_toBottomOf="@id/tv_section_subtitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

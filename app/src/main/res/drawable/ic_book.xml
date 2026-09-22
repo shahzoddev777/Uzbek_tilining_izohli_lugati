@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Book -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M5,4.5C5,3.67 5.67,3 6.5,3H10.5C11.88,3 13,4.12 13,5.5V20C12.3,19.45 11.43,19 10.5,19H6.5C5.67,19 5,18.33 5,17.5V4.5Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19,4.5C19,3.67 18.33,3 17.5,3H13.5C12.12,3 11,4.12 11,5.5V20C11.7,19.45 12.57,19 13.5,19H17.5C18.33,19 19,18.33 19,17.5V4.5Z" />
+
+    <!-- Book center line -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M12,5V19" />
+
+</vector>
