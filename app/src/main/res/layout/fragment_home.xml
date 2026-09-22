@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,9 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/settings_background"
     tools:context=".presentation.HomeFragment">
-
-
-    <!-- PREMIUM HEADER -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -26,8 +22,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <!-- Decorative circle -->
 
             <View
                 android:layout_width="170dp"
@@ -45,7 +39,6 @@
                 android:layout_marginBottom="-55dp"
                 android:background="@drawable/bg_header_circle_light" />
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,9 +47,6 @@
                 android:paddingTop="24dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="20dp">
-
-
-                <!-- WELCOME -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -68,9 +58,6 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-
-                <!-- TITLE -->
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,9 +68,6 @@
                     android:textSize="27sp"
                     android:textStyle="bold" />
 
-
-                <!-- SUBTITLE -->
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -91,9 +75,6 @@
                     android:text="So‘zlarning ma’nosini tez va oson toping"
                     android:textColor="#D5E3FF"
                     android:textSize="13sp" />
-
-
-                <!-- SEARCH -->
 
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/searchBox"
@@ -114,9 +95,6 @@
         </FrameLayout>
 
     </androidx.cardview.widget.CardView>
-
-
-    <!-- WORD COUNT / SECTION -->
 
     <LinearLayout
         android:id="@+id/section_header"
@@ -172,9 +150,6 @@
 
     </LinearLayout>
 
-
-    <!-- WORD LIST -->
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -183,7 +158,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -195,9 +169,6 @@
             android:paddingEnd="12dp"
             android:paddingBottom="20dp"
             android:scrollbars="none" />
-
-
-        <!-- EMPTY STATE -->
 
         <LinearLayout
             android:id="@+id/layoutEmpty"

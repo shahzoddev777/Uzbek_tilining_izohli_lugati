@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +8,6 @@
     android:background="@color/settings_background"
     tools:context=".presentation.SettingFragment">
 
-    <!-- HEADER -->
     <LinearLayout
         android:id="@+id/liner"
         android:layout_width="match_parent"
@@ -69,9 +67,6 @@
 
     </LinearLayout>
 
-
-    <!-- CONTENT -->
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -89,9 +84,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
-            <!-- FEEDBACK -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview1"
@@ -161,9 +153,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <!-- RATE -->
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview2"
                 android:layout_width="match_parent"
@@ -230,9 +219,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
-
-            <!-- DARK MODE -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview_dark_mode"
@@ -303,9 +289,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <!-- ABOUT -->
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview3"
                 android:layout_width="match_parent"
@@ -366,9 +349,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <!-- PREMIUM INFO -->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -393,8 +373,6 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
-
-
 
             <TextView
                 android:layout_width="match_parent"

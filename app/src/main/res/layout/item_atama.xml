@@ -26,7 +26,6 @@
         android:paddingTop="14dp"
         android:paddingBottom="14dp">
 
-        <!-- Ko‘k belgi -->
         <TextView
             android:id="@+id/tvFirstLetter"
             android:layout_width="38dp"
@@ -39,7 +38,6 @@
             android:fontFamily="@font/inter"
             android:background="@drawable/bg_small_blue" />
 
-        <!-- So‘z -->
         <TextView
             android:id="@+id/tvWord"
             android:layout_width="0dp"

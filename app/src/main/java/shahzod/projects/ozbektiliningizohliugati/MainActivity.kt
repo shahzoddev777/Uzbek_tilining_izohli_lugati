@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     private val notifPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) {
-        // Permission natijasi
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,20 +34,13 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        // MUHIM:
-        // enableEdgeToEdge() OLIB TASHLANDI.
-        // Chunki status bar ilova kontenti ustiga chiqib ketayotgan edi.
-
-        // System barlarni normal holatda ishlatamiz
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        // Status bar rangi
         window.statusBarColor = ContextCompat.getColor(
             this,
             R.color.header_blue
         )
 
-        // Navigation bar rangi
         window.navigationBarColor = ContextCompat.getColor(
             this,
             R.color.surface
@@ -72,13 +64,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        // Status bar ikonkalari
         applySystemBarAppearance()
 
-
-        // ==============================
-        // SYSTEM BAR INSETS
-        // ==============================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
 
@@ -96,10 +83,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-        // ==============================
-        // BOTTOM NAVIGATION
-        // ==============================
 
         ViewCompat.setOnApplyWindowInsetsListener(
             binding.bottomNavigationView
@@ -120,10 +103,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // ==============================
-        // NAVIGATION
-        // ==============================
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(
                 R.id.nav_host_fragment
@@ -140,10 +119,6 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.splashFragment)
         }
 
-
-        // ==============================
-        // DESTINATION O'ZGARGANDA
-        // ==============================
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
@@ -168,10 +143,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // ==============================
-        // BOTTOM NAVIGATION ANIMATION
-        // ==============================
-
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
 
             val view =
@@ -194,10 +165,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    // ==================================================
-    // SYSTEM BAR APPEARANCE
-    // ==================================================
-
     private fun applySystemBarAppearance() {
 
         val isNightMode =
@@ -211,19 +178,11 @@ class MainActivity : AppCompatActivity() {
                 window.decorView
             )
 
-        // Header ko'k bo'lgani uchun ikonalar OQ
         controller.isAppearanceLightStatusBars = false
 
-        // Light mode -> qora navigation ikonkalari
-        // Dark mode  -> oq navigation ikonkalari
         controller.isAppearanceLightNavigationBars =
             !isNightMode
     }
-
-
-    // ==================================================
-    // HAR BIR EKRAN UCHUN SYSTEM BAR
-    // ==================================================
 
     private fun adjustSystemBarsForDestination(
         destinationId: Int
@@ -241,7 +200,6 @@ class MainActivity : AppCompatActivity() {
             )
 
 
-        // Status bar FONI HAR DOIM header_blue
         window.statusBarColor =
             ContextCompat.getColor(
                 this,
@@ -251,18 +209,14 @@ class MainActivity : AppCompatActivity() {
 
         if (isNightMode) {
 
-            // Dark mode
             controller.isAppearanceLightStatusBars = false
 
         } else {
 
-            // Light mode
-            // Header ko'k bo'lgani uchun HAR DOIM oq ikonka
             controller.isAppearanceLightStatusBars = false
         }
 
 
-        // Navigation bar
         controller.isAppearanceLightNavigationBars =
             !isNightMode
     }

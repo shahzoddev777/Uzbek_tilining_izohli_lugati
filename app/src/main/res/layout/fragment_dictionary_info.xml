@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,9 +8,6 @@
     android:background="@color/settings_background"
     tools:context=".presentation.DictionaryInfoFragment">
 
-    <!-- ========================= -->
-    <!-- Yuqori panel -->
-    <!-- ========================= -->
     <androidx.cardview.widget.CardView
         android:id="@+id/topCard"
         android:layout_width="0dp"
@@ -32,9 +28,6 @@
             android:paddingTop="18dp"
             android:paddingBottom="22dp">
 
-            <!-- ========================= -->
-            <!-- ORQAGA TUGMASI -->
-            <!-- ========================= -->
             <ImageView
                 android:id="@+id/btn_back"
                 android:layout_width="40dp"
@@ -48,8 +41,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/primary_blue" />
-
-
 
             <FrameLayout
                 android:id="@+id/word_container"
@@ -85,10 +76,6 @@
 
             </FrameLayout>
 
-
-            <!-- ========================= -->
-            <!-- OVOZ TUGMASI -->
-            <!-- ========================= -->
             <ImageView
                 android:id="@+id/img_transcription_icon"
                 android:layout_width="40dp"
@@ -106,10 +93,6 @@
 
     </androidx.cardview.widget.CardView>
 
-
-    <!-- ========================= -->
-    <!-- KONTENT -->
-    <!-- ========================= -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -129,9 +112,6 @@
             android:paddingEnd="14dp"
             android:paddingBottom="30dp">
 
-            <!-- ========================= -->
-            <!-- IZOH KARTASI -->
-            <!-- ========================= -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,7 +125,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- Sarlavha -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -169,8 +148,6 @@
 
                     </LinearLayout>
 
-
-                    <!-- Izoh -->
                     <TextView
                         android:id="@+id/tv_description"
                         android:layout_width="match_parent"

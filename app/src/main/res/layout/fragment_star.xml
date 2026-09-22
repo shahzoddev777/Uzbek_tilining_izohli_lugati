@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/settings_background">
 
-    <!-- TOP BAR -->
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -22,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Back button -->
         <FrameLayout
             android:layout_width="44dp"
             android:layout_height="44dp"
@@ -54,9 +51,6 @@
 
     </LinearLayout>
 
-
-    <!-- MAIN CONTENT -->
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -76,9 +70,6 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-
-            <!-- ILLUSTRATION CARD -->
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
@@ -91,8 +82,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_rating_illustration">
-
-                    <!-- Decorative circles -->
 
                     <View
                         android:layout_width="110dp"
@@ -123,9 +112,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <!-- HEADING -->
-
             <TextView
                 android:id="@+id/tv_heading"
                 android:layout_width="match_parent"
@@ -137,9 +123,6 @@
                 android:textColor="@color/text_primary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
-
-            <!-- DESCRIPTION -->
 
             <TextView
                 android:id="@+id/tv_description"
@@ -154,9 +137,6 @@
                 android:text="@string/rate_app_description"
                 android:textColor="@color/text_secondary"
                 android:textSize="15sp" />
-
-
-            <!-- RATING CARD -->
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -201,9 +181,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <!-- BUTTON -->
-
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_rate"
                 android:layout_width="match_parent"
@@ -220,9 +197,6 @@
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
-
-            <!-- LATER -->
-
             <TextView
                 android:id="@+id/tv_later"
                 android:layout_width="wrap_content"
@@ -235,9 +209,6 @@
                 android:textColor="@color/primary_blue"
                 android:textSize="14sp"
                 android:textStyle="bold" />
-
-
-            <!-- FOOTER -->
 
             <TextView
                 android:layout_width="match_parent"

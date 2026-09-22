@@ -29,7 +29,6 @@ class DictionaryAdapter(
                 val spannable = SpannableString(word)
                 val start = word.indexOf(query, ignoreCase = true)
                 val end = start + query.length
-                // Highlight color - using a blue shade that matches the app
                 spannable.setSpan(
                     ForegroundColorSpan(Color.parseColor("#0D47A1")),
                     start,
@@ -40,6 +39,8 @@ class DictionaryAdapter(
             } else {
                 binding.tvWord.text = word
             }
+
+            binding.tvFirstLetter.text = word.firstOrNull()?.toString()?.uppercase() ?: ""
 
             binding.root.setOnClickListener {
                 onItemClickListener?.invoke(data)
