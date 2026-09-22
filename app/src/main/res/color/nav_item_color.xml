@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Tanlangan (selected) holatdagi rang (rasmdagi ko'k rang) -->
-    <item android:color="#0D47A1" android:state_checked="true" />
+    <!-- Tanlangan (selected) holatdagi rang -->
+    <item android:color="@color/nav_selected" android:state_checked="true" />
 
     <!-- Tanlanmagan (unselected) holatdagi rang -->
-    <item android:color="#9E9E9E" android:state_checked="false" />
+    <item android:color="@color/nav_unselected" android:state_checked="false" />
 </selector>

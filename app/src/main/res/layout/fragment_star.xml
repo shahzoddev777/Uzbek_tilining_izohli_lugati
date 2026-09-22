@@ -189,12 +189,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:backgroundTint="#E5E7EB"
+                        android:backgroundTint="@color/rating_track"
                         android:isIndicator="false"
                         android:numStars="5"
-                        android:progressTint="#FFC107"
+                        android:progressTint="@color/rating_fill"
                         android:rating="0"
-                        android:secondaryProgressTint="#E5E7EB"
+                        android:secondaryProgressTint="@color/rating_track"
                         android:stepSize="1.0" />
 
                 </LinearLayout>

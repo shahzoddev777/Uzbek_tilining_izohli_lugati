@@ -1,23 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.OzbekTiliningIzohliUgati" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <!-- Light theme -->
+    <style
+        name="Base.Theme.OzbekTiliningIzohliUgati"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <item name="android:colorBackground">@color/background</item>
         <item name="android:statusBarColor">@color/header_blue</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+        <!-- NAVIGATION BAR -->
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="bottomNavigationStyle">
+            @style/Widget.App.BottomNavigationView
+        </item>
 
     </style>
 
-    <style name="Theme.OzbekTiliningIzohliUgati" parent="Base.Theme.OzbekTiliningIzohliUgati" />
 
-    <!-- BottomNavigationView uchun maxsus style -->
-    <style name="Widget.App.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+    <style
+        name="Theme.OzbekTiliningIzohliUgati"
+        parent="Base.Theme.OzbekTiliningIzohliUgati" />
+
+
+    <!-- BottomNavigationView -->
+    <style
+        name="Widget.App.BottomNavigationView"
+        parent="Widget.Material3.BottomNavigationView">
+
         <item name="itemBackground">@android:color/transparent</item>
+
     </style>
 
-    <!-- Splash Screen uchun maxsus tema -->
-    <style name="Theme.AppSplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
-        <item name="postSplashScreenTheme">@style/Theme.OzbekTiliningIzohliUgati</item>
+
+    <!-- Splash Screen -->
+    <style
+        name="Theme.AppSplashScreen"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">
+            @color/background
+        </item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/splash_screen
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.OzbekTiliningIzohliUgati
+        </item>
+
     </style>
+
 </resources>

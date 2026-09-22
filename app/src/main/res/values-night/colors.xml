@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FFFFFFFF</color>
-    <color name="white">#FF121212</color>
+
+    <!-- ============ Literal (theme-independent) ============ -->
+    <!-- Intentionally NOT overridden here: white/black must stay literal so
+         white icons/text on blue surfaces remain visible in Dark Mode too. -->
+
+    <!-- ============ Brand ============ -->
     <color name="gold">#EAD08D</color>
+    <color name="header_blue">#152E65</color>
     <color name="splash_text_color">#FFFFFF</color>
+
+    <!-- ============ Primary (brighter for contrast on dark surfaces) ============ -->
+    <color name="primary_blue">#5B93FF</color>
+    <color name="primary_blue_dark">#3E6FDB</color>
+
+    <!-- ============ Surfaces — a designed dark palette, not an inversion ============ -->
+    <color name="background">#0D1220</color>
+    <color name="surface">#161D2E</color>
+    <color name="surface_variant">#1E2740</color>
+
+    <color name="settings_background">#0D1220</color>
+    <color name="card_background">#161D2E</color>
+
+    <!-- ============ Text / Icons ============ -->
+    <color name="text_primary">#EAF0FF</color>
+    <color name="text_secondary">#9AA7C7</color>
+    <color name="icon_gray">#6E7C9E</color>
+
+    <!-- ============ Divider ============ -->
+    <color name="divider">#2A3350</color>
+
+    <!-- ============ Settings icons ============ -->
     <color name="setting_icon">#B0BEC5</color>
     <color name="setting_subtitle">#90A4AE</color>
+
+    <!-- ============ Accent gradients (kept vivid, still readable on dark) ============ -->
+    <color name="blue_icon_start">#3E6FDB</color>
+    <color name="blue_icon_end">#5B93FF</color>
+    <color name="purple_icon_start">#6D28D9</color>
+    <color name="purple_icon_end">#9333EA</color>
+
+    <!-- ============ Switch ============ -->
+    <color name="switch_thumb">#EAF0FF</color>
+    <color name="switch_track">#3A4568</color>
+
+    <!-- ============ Bottom navigation ============ -->
+    <color name="nav_selected">#5B93FF</color>
+    <color name="nav_unselected">#6E7C9E</color>
+
+    <!-- ============ Misc content colors used in dictionary items ============ -->
+    <color name="dictionary_index_text">#8FB4FF</color>
+    <color name="dictionary_item_divider">#2A3350</color>
+
+    <!-- ============ Rating stars ============ -->
+    <color name="rating_track">#2A3350</color>
+    <color name="rating_fill">#FFC107</color>
+
 </resources>

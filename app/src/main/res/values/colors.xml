@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Basic -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Brand -->
     <color name="gold">#C5A358</color>
-    <color name="splash_text_color">#FFFFFF</color>
+    <color name="header_blue">#152E65</color>
+    <color name="splash_text_color">#43A047</color>
 
-    <!-- Settings -->
-    <color name="setting_icon">#3F536E</color>
-    <color name="setting_subtitle">#78909C</color>
-
-    <!-- Primary Blue -->
     <color name="primary_blue">#2563EB</color>
     <color name="primary_blue_dark">#1D4ED8</color>
 
-    <!-- Background -->
+    <!-- ============ Surfaces (adapt per theme) ============ -->
+    <color name="background">#F6F8FC</color>
+
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#EEF2FA</color>
+
+    <!-- Kept for backward compatibility with existing layout references -->
     <color name="settings_background">#F6F8FC</color>
     <color name="card_background">#FFFFFF</color>
 
-    <!-- Text -->
+    <!-- ============ Text / Icons (adapt per theme) ============ -->
     <color name="text_primary">#172033</color>
     <color name="text_secondary">#7B8497</color>
     <color name="icon_gray">#A5ADBC</color>
 
-    <!-- Blue Gradient -->
+    <!-- ============ Divider (adapts per theme) ============ -->
+    <color name="divider">#E5E7EB</color>
+
+    <!-- ============ Settings icons ============ -->
+    <color name="setting_icon">#3F536E</color>
+    <color name="setting_subtitle">#78909C</color>
+
+    <!-- ============ Accent gradients ============ -->
     <color name="blue_icon_start">#2563EB</color>
     <color name="blue_icon_end">#4F8CFF</color>
-
-    <!-- Purple Gradient -->
     <color name="purple_icon_start">#7C3AED</color>
     <color name="purple_icon_end">#A855F7</color>
 
-    <!-- Switch -->
+    <!-- ============ Switch ============ -->
     <color name="switch_thumb">#FFFFFF</color>
     <color name="switch_track">#CBD5E1</color>
 
-    <!-- Home Header -->
-    <color name="header_blue">#172F68</color>
+    <!-- ============ Bottom navigation ============ -->
+    <color name="nav_selected">#0D47A1</color>
+    <color name="nav_unselected">#9E9E9E</color>
+
+    <!-- ============ Misc content colors used in dictionary items ============ -->
+    <color name="dictionary_index_text">#01306A</color>
+    <color name="dictionary_item_divider">#EBE8DD</color>
+
+    <!-- ============ Rating stars ============ -->
+    <color name="rating_track">#E5E7EB</color>
+    <color name="rating_fill">#FFC107</color>
 
 </resources>

@@ -9,7 +9,9 @@
     android:background="@color/settings_background"
     tools:context=".presentation.DictionaryInfoFragment">
 
+    <!-- ========================= -->
     <!-- Yuqori panel -->
+    <!-- ========================= -->
     <androidx.cardview.widget.CardView
         android:id="@+id/topCard"
         android:layout_width="0dp"
@@ -30,69 +32,84 @@
             android:paddingTop="18dp"
             android:paddingBottom="22dp">
 
-            <!-- Orqaga -->
+            <!-- ========================= -->
+            <!-- ORQAGA TUGMASI -->
+            <!-- ========================= -->
             <ImageView
                 android:id="@+id/btn_back"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="14dp"
                 android:background="@drawable/bg_back_button"
                 android:padding="9dp"
                 android:rotation="180"
                 android:src="@drawable/right"
-                app:tint="@color/primary_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primary_blue" />
 
-            <!-- So'z -->
-            <TextView
-                android:id="@+id/tv_word"
+
+
+            <FrameLayout
+                android:id="@+id/word_container"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/inter"
-                android:text="adabiyot"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/img_transcription_icon"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:minHeight="44dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/img_transcription_icon"
                 app:layout_constraintStart_toEndOf="@id/btn_back"
-                app:layout_constraintTop_toTopOf="@id/img_transcription_icon" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <!-- Ovoz -->
+                <TextView
+                    android:id="@+id/tv_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="true"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:text="abadiylashtirmoq"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="18sp"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeStepGranularity="1sp" />
+
+            </FrameLayout>
+
+
+            <!-- ========================= -->
+            <!-- OVOZ TUGMASI -->
+            <!-- ========================= -->
             <ImageView
                 android:id="@+id/img_transcription_icon"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_back_button"
                 android:padding="10dp"
                 android:src="@drawable/speaker"
-                app:tint="@color/primary_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/btn_back" />
-
-            <!-- Kichik yozuv -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginTop="12dp"
-                android:text="So‘z ma’nosi"
-                android:textColor="#BFD3FF"
-                android:textSize="13sp"
-                android:fontFamily="@font/inter"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_back" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primary_blue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
 
-    <!-- Kontent -->
+    <!-- ========================= -->
+    <!-- KONTENT -->
+    <!-- ========================= -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -112,7 +129,9 @@
             android:paddingEnd="14dp"
             android:paddingBottom="30dp">
 
-            <!-- Izoh kartasi -->
+            <!-- ========================= -->
+            <!-- IZOH KARTASI -->
+            <!-- ========================= -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -150,6 +169,7 @@
 
                     </LinearLayout>
 
+
                     <!-- Izoh -->
                     <TextView
                         android:id="@+id/tv_description"
@@ -157,6 +177,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:fontFamily="sans-serif"
+                        android:includeFontPadding="true"
                         android:lineSpacingExtra="5dp"
                         android:text="Adabiyot — badiiy asarlar, ilmiy va badiiy asarlar majmui, shuningdek, insonning ruhiy dunyosini, his-tuyg'ularini, fikrlarini badiiy ifodalash san'atidir."
                         android:textColor="@color/text_primary"
