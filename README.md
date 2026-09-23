@@ -14,10 +14,10 @@ O'zbek tilidagi so'zlarning ma'nosini tez va oson topish, imlo (to'g'ri yozilish
 ## 📸 Skrinshotlar
 
 <p align="center">
-  <img src="screenshots/screen1.png" width="200" />
-  <img src="screenshots/screen2.png" width="200" />
-  <img src="screenshots/screen3.png" width="200" />
-  <img src="screenshots/screen4.png" width="200" />
+  <img src="screenshots/screen1.jpg" width="200" />
+  <img src="screenshots/screen2.jpg" width="200" />
+  <img src="screenshots/screen3.jpg" width="200" />
+  <img src="screenshots/screen4.jpg" width="200" />
 </p>
 
 > Skrinshotlarni `screenshots/` papkasiga joylab, yuqoridagi yo'llarni loyihangizdagi haqiqiy fayl nomlariga moslang.
@@ -25,7 +25,6 @@ O'zbek tilidagi so'zlarning ma'nosini tez va oson topish, imlo (to'g'ri yozilish
 ## 🛠 Texnologiyalar
 
 - **Til:** Kotlin
-- **Arxitektura:** MVVM / Clean Architecture
 - **Ma'lumotlar bazasi:** Room
 - **Asinxron ishlov:** Coroutines, Flow
 - **UI:** Jetpack Compose / XML (loyihangizga mos ravishda tanlang)
