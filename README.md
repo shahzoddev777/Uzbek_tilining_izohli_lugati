@@ -29,7 +29,6 @@ O'zbek tilidagi so'zlarning ma'nosini tez va oson topish, imlo (to'g'ri yozilish
 - **UI:** Jetpack Compose / XML (loyihangizga mos ravishda tanlang)
 - **Dependency Injection:** Dagger Hilt
 
-> Yuqoridagi ro'yxatni loyihangizda haqiqatda ishlatilgan kutubxonalarga qarab tahrirlang — men buni sizning umumiy tajribangiz asosida taxminiy tarzda kiritdim, chunki yuklangan zip-fayl qirqilib qolgani sabab loyiha kodini o'qiy olmadim.
 
 ## 🚀 O'rnatish
 
