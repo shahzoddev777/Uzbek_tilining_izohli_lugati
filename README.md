@@ -20,7 +20,6 @@ O'zbek tilidagi so'zlarning ma'nosini tez va oson topish, imlo (to'g'ri yozilish
   <img src="screenshots/screen4.jpg" width="200" />
 </p>
 
-> Skrinshotlarni `screenshots/` papkasiga joylab, yuqoridagi yo'llarni loyihangizdagi haqiqiy fayl nomlariga moslang.
 
 ## 🛠 Texnologiyalar
 
