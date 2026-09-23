@@ -49,6 +49,7 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 tts?.setLanguage(Locale("tr"))
             }
+            tts?.setSpeechRate(0.85f)
             isTtsReady = true
         } else {
             isTtsReady = false
