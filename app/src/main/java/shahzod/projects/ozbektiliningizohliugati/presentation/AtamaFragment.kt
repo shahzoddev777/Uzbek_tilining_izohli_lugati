@@ -34,7 +34,7 @@ class AtamaFragment : Fragment(R.layout.fragment_atama) {
             allWords = withContext(Dispatchers.IO) {
                 db.getAtamaDao().getAllAtamaWords()
             }
-            adapter.submitList(allWords)
+            filterWords(binding.searchBox.query?.toString())
         }
 
         binding.searchBox.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -50,11 +50,12 @@ class AtamaFragment : Fragment(R.layout.fragment_atama) {
     }
 
     private fun filterWords(query: String?) {
-        val filteredList = if (query.isNullOrEmpty()) {
+        val q = query?.trim()?.replace(Regex("[’‘ʻʼ`´]"), "'")
+        val filteredList = if (q.isNullOrEmpty()) {
             allWords
         } else {
             allWords.filter {
-                it.word.contains(query, ignoreCase = true)
+                it.word.contains(q, ignoreCase = true)
             }
         }
         adapter.submitList(filteredList)

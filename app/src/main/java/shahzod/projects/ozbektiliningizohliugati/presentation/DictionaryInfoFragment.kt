@@ -3,6 +3,7 @@ package shahzod.projects.ozbektiliningizohliugati.presentation
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -41,9 +42,22 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
                 tts?.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, null, "")
             }
         }
+
+        binding.btnShare.setOnClickListener {
+            it.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.scale_up))
+
+            val currentWord = binding.tvWord.text?.toString() ?: word ?: ""
+            val currentDescription = binding.tvDescription.text?.toString() ?: description ?: ""
+
+            if (currentWord.isNotEmpty()) {
+                val bottomSheet = ShareBottomSheetDialogFragment.newInstance(currentWord, currentDescription)
+                bottomSheet.show(childFragmentManager, "ShareBottomSheet")
+            }
+        }
     }
 
     override fun onInit(status: Int) {
+        if (!isAdded || view == null) return
         if (status == TextToSpeech.SUCCESS) {
             val result = tts?.setLanguage(Locale("uz"))
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
@@ -60,6 +74,8 @@ class DictionaryInfoFragment : Fragment(R.layout.fragment_dictionary_info), Text
     override fun onDestroyView() {
         tts?.stop()
         tts?.shutdown()
+        tts = null
+        isTtsReady = false
         super.onDestroyView()
     }
 }

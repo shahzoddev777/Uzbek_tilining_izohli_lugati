@@ -28,7 +28,8 @@ class WordOfTheDayWorker(
         return Result.success()
     }
 
-    private fun showNotification(title: String, description: String) {
+    private fun showNotification(title: String, fullDescription: String) {
+        val description = fullDescription.trim().take(400)
         val channelId = "word_of_the_day"
         val manager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -41,7 +42,9 @@ class WordOfTheDayWorker(
             manager.createNotificationChannel(channel)
         }
 
-        val intent = Intent(applicationContext, MainActivity::class.java)
+        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
         val pendingIntent = PendingIntent.getActivity(
             applicationContext, 0, intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE

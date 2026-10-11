@@ -5,12 +5,10 @@
     android:viewportWidth="200"
     android:viewportHeight="180">
 
-    <!-- Soft background circle -->
     <path
         android:fillColor="#EAF2FF"
         android:pathData="M100,10 A80,80 0,1 0,100,170 A80,80 0,1 0,100,10" />
 
-    <!-- Main big star -->
     <path
         android:fillColor="#FFC107"
         android:pathData="M100,35
@@ -25,7 +23,6 @@
             L91,62
             Z" />
 
-    <!-- Star highlight -->
     <path
         android:fillColor="#FFD95A"
         android:pathData="M100,42
@@ -36,7 +33,6 @@
             L100,84
             Z" />
 
-    <!-- Small star left -->
     <path
         android:fillColor="#4F8CFF"
         android:pathData="M48,78
@@ -51,7 +47,6 @@
             L44,89
             Z" />
 
-    <!-- Small star right -->
     <path
         android:fillColor="#7C3AED"
         android:pathData="M153,75
@@ -66,7 +61,6 @@
             L149,86
             Z" />
 
-    <!-- Sparkle top left -->
     <path
         android:fillColor="#2563EB"
         android:pathData="M48,40
@@ -79,7 +73,6 @@
             L45,49
             Z" />
 
-    <!-- Sparkle top right -->
     <path
         android:fillColor="#A855F7"
         android:pathData="M151,39
@@ -92,14 +85,12 @@
             L148,48
             Z" />
 
-    <!-- Bottom shadow -->
     <path
         android:fillColor="#D7E4FA"
         android:pathData="M57,128
             C75,119 125,119 143,128
             C130,142 70,142 57,128 Z" />
 
-    <!-- Rating stars row -->
     <path
         android:fillColor="#FFC107"
         android:pathData="M69,122

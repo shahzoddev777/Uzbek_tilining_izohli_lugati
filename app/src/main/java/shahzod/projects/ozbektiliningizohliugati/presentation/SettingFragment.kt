@@ -45,8 +45,17 @@ class SettingFragment : Fragment(R.layout.fragment_setting) {
             }
         }
 
+        val versionName = try {
+            val packageInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
+            packageInfo.versionName ?: "1.2.1"
+        } catch (e: Exception) {
+            "1.2.1"
+        }
+        val versionText = getString(R.string.app_version, versionName)
+        binding.tvAppVersion.text = versionText
+
         binding.cardview3.setOnClickListener {
-            Toast.makeText(requireContext(), getString(R.string.app_version), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), versionText, Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/header_blue"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -14,23 +16,64 @@
         android:layout_height="0dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/surface"
-        android:visibility="gone"
-        app:itemIconSize="22dp"
-        app:itemIconTint="@color/nav_item_color"
-        app:itemTextColor="@color/nav_item_color"
-        app:labelVisibilityMode="labeled"
-        app:itemActiveIndicatorStyle="@null"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_app" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/bottomBarContainer"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="16dp"
+        android:clipToOutline="true"
+        android:background="@drawable/bg_glass_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.mmin18.widget.RealtimeBlurView
+                android:id="@+id/realtimeBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:realtimeBlurRadius="25dp"
+                app:realtimeOverlayColor="@color/nav_glass_overlay" />
+
+            <View
+                android:id="@+id/glassBorderView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_glass_border" />
+
+            <View
+                android:id="@+id/animatedIndicator"
+                android:layout_width="58dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_active_indicator" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                app:itemIconSize="24dp"
+                app:itemIconTint="@color/nav_item_color"
+                app:itemActiveIndicatorStyle="@style/BottomNavActiveIndicator"
+                app:itemRippleColor="@android:color/transparent"
+                app:itemHorizontalTranslationEnabled="false"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/menu_app" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

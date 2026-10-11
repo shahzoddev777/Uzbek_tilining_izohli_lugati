@@ -50,7 +50,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             override fun onQueryTextSubmit(query: String?): Boolean = false
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                val query = newText ?: ""
+                val query = (newText ?: "").trim().replace(Regex("[’‘ʻʼ`´]"), "'")
                 searchJob?.cancel()
                 searchJob = viewLifecycleOwner.lifecycleScope.launch {
                     delay(250)
@@ -70,7 +70,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun loadWords() {
-        viewLifecycleOwner.lifecycleScope.launch {
+        searchJob = viewLifecycleOwner.lifecycleScope.launch {
             val words = withContext(Dispatchers.IO) { db.getWordDao().getAllWords() }
             adapter.submitList(words)
         }

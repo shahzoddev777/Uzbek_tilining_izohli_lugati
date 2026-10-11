@@ -32,8 +32,21 @@
     <color name="switch_thumb">#EAF0FF</color>
     <color name="switch_track">#3A4568</color>
 
-    <color name="nav_selected">#5B93FF</color>
-    <color name="nav_unselected">#6E7C9E</color>
+    <color name="liquid_switch_track_off">#333A4568</color>
+    <color name="liquid_switch_track_on">#EB2563EB</color>
+    <color name="liquid_switch_border_off">#40FFFFFF</color>
+    <color name="liquid_switch_border_on">#60FFFFFF</color>
+    <color name="liquid_switch_thumb_start">#FFFFFF</color>
+    <color name="liquid_switch_thumb_end">#EAF0FF</color>
+    <color name="nav_background">#2C2C2E</color>
+    <color name="nav_selected">#FFFFFF</color>
+    <color name="nav_unselected">#94A3B8</color>
+    <color name="nav_border">#2EFFFFFF</color>
+    <color name="nav_glass_bg">#3D1E293B</color>
+    <color name="nav_glass_overlay">#26000000</color>
+    <color name="nav_glass_border">#2EFFFFFF</color>
+    <color name="nav_indicator_bg">#D93B82F6</color>
+    <color name="nav_indicator_border">#33FFFFFF</color>
 
     <color name="dictionary_index_text">#8FB4FF</color>
     <color name="dictionary_item_divider">#2A3350</color>

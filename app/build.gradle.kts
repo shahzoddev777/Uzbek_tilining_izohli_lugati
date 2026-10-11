@@ -11,8 +11,8 @@ android {
         applicationId = "shahzod.projects.ozbektiliningizohliugati"
         minSdk = 24
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.2.1"
+        versionCode = 6
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -59,15 +59,12 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
-    //room
     val room_version = "2.8.4"
     implementation("androidx.room:room-runtime:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
 
-    //viewbinding
     implementation("dev.androidbroadcast.vbpd:vbpd:2.0.4")
-    //splashscreen
     implementation("androidx.core:core-splashscreen:1.0.1")
-    //notification
     implementation("androidx.work:work-runtime-ktx:2.9.1")
+    implementation("androidx.interpolator:interpolator:1.0.0")
 }

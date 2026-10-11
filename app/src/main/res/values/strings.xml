@@ -19,7 +19,7 @@
     <string name="dark_mode">Tungi rejim</string>
     <string name="dark_mode_desc">To\'q rangli mavzuni yoqish</string>
     <string name="about_app">Ilova haqida</string>
-    <string name="app_version">Versiya 1.1.0</string>
+    <string name="app_version">Versiya %1$s</string>
     <string name="app_motto">O\'zbek tilining  boy merosini \nhar bir telefonga olib kiramiz</string>
     <string name="explanation">Izoh</string>
     <string name="home">Bosh sahifa</string>
@@ -28,4 +28,12 @@
     <string name="please_select_stars">Iltimos, yulduzchalarni tanlang</string>
     <string name="speech_service_error">Ovozli xizmatni ishga tushirib bo\'lmadi</string>
     <string name="no_results">Hech narsa topilmadi</string>
+
+    <string name="share">Ulashish</string>
+    <string name="share_title">Lug‘at kartasini ulashish</string>
+    <string name="share_as_image">Rasm sifatida ulashish</string>
+    <string name="share_as_text">Matn sifatida ulashish</string>
+    <string name="share_formatting_template">📖 %1$s\n\n%2$s\n\nIzohli Lug‘at</string>
+    <string name="app_full_title">O‘ZBEK TILINING IZOHLI LUG‘ATI</string>
+    <string name="dictionary_watermark">Izohli Lug‘at | ShahzodCodes</string>
 </resources>

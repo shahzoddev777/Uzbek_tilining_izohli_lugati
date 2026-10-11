@@ -1,6 +1,6 @@
 package shahzod.projects.ozbektiliningizohliugati.adapter
 
-import android.graphics.Color
+import androidx.core.content.ContextCompat
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -30,7 +30,7 @@ class DictionaryAdapter(
                 val start = word.indexOf(query, ignoreCase = true)
                 val end = start + query.length
                 spannable.setSpan(
-                    ForegroundColorSpan(Color.parseColor("#0D47A1")),
+                    ForegroundColorSpan(ContextCompat.getColor(binding.root.context, shahzod.projects.ozbektiliningizohliugati.R.color.primary_blue)),
                     start,
                     end,
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE

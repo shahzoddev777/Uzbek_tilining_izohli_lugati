@@ -276,14 +276,10 @@
 
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.SwitchCompat
+                    <shahzod.projects.ozbektiliningizohliugati.widget.LiquidGlassSwitch
                         android:id="@+id/switch_dark_mode"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:scaleX="1.05"
-                        android:scaleY="1.05"
-                        app:thumbTint="@color/switch_thumb"
-                        app:trackTint="@color/switch_track" />
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
@@ -336,6 +332,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tv_app_version"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
