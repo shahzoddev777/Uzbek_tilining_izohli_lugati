@@ -64,6 +64,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // BottomNavigationView tizim panel balandligini o'ziga padding qilib olmasin
+        // (3 tugmali kichik telefonlarda ikonkalar tepaga chiqib ketishining sababi shu edi)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigationView) { v, _ ->
+            v.setPadding(0, 0, 0, 0)
+            WindowInsetsCompat.CONSUMED
+        }
+
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.nav_host_fragment
         ) as NavHostFragment
@@ -120,11 +127,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateBottomNavigationTheme() {
         applySystemBarAppearance()
 
-        val blurOverlayColor = ContextCompat.getColor(this, R.color.nav_glass_overlay)
-        binding.realtimeBlurView.setOverlayColor(blurOverlayColor)
-        binding.realtimeBlurView.invalidate()
-
-        binding.glassBorderView.background = ContextCompat.getDrawable(this, R.drawable.bg_glass_border)?.mutate()
+        binding.bottomBarContainer.background = ContextCompat.getDrawable(this, R.drawable.bg_glass_border)?.mutate()
         binding.animatedIndicator.background = ContextCompat.getDrawable(this, R.drawable.bg_active_indicator)?.mutate()
 
         val colorStateList = ContextCompat.getColorStateList(this, R.color.nav_item_color)

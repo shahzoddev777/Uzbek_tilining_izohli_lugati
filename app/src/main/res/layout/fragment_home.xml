@@ -176,7 +176,7 @@
             android:paddingStart="12dp"
             android:paddingTop="4dp"
             android:paddingEnd="12dp"
-            android:paddingBottom="120dp"
+            android:paddingBottom="180dp"
             android:scrollbars="none" />
 
         <LinearLayout

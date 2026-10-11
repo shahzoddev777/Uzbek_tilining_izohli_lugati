@@ -11,15 +11,19 @@ android {
         applicationId = "shahzod.projects.ozbektiliningizohliugati"
         minSdk = 24
         targetSdk = 36
-        versionCode = 6
-        versionName = "2.0"
+        versionCode = 7
+        versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file(project.findProperty("RELEASE_STORE_FILE") ?: "keystore/release.jks")
+            val storeFilePath = project.findProperty("RELEASE_STORE_FILE") as String? ?: "keystore/release.jks"
+            val storeFileObj = file(storeFilePath)
+            if (storeFileObj.exists()) {
+                storeFile = storeFileObj
+            }
             storePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String?
             keyAlias = project.findProperty("RELEASE_KEY_ALIAS") as String?
             keyPassword = project.findProperty("RELEASE_KEY_PASSWORD") as String?
@@ -28,7 +32,12 @@ android {
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("release")
+            val storeFilePath = project.findProperty("RELEASE_STORE_FILE") as String? ?: "keystore/release.jks"
+            if (file(storeFilePath).exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            } else {
+                signingConfig = signingConfigs.getByName("debug")
+            }
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
